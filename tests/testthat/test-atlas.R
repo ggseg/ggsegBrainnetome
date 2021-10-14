@@ -1,11 +1,11 @@
 # ggseg ----
 context("test-palettes")
 test_that("check new palettes work", {
-  expect_equal(length(brain_pal("brainnetome", package = "ggsegBrainnetome")), 10)
+  expect_equal(length(brain_pal("brainnetome", package = "ggsegBrainnetome")), 210)
 
   expect_error(brain_pal("brainnetome"), "not a valid")
 
-  expect_true(all(names(brain_pal("brainnetome", package = "ggsegBrainnetome")) %in% brain_regions(brainnetome)))
+  expect_true(all(brain_regions(brainnetome) %in% names(brain_pal("brainnetome", package = "ggsegBrainnetome"))))
 })
 
 context("test-ggseg-atlas")
@@ -30,7 +30,7 @@ test_that("Check that polygon atlases are working", {
               scale_fill_brain("brainnetome", package = "ggsegBrainnetome"),
             c("gg","ggplot"))
 
-  expect_is(ggseg(atlas = brainnetome, mapping=aes(fill=region), adapt_scales = F ),c("gg","ggplot"))
+  expect_is(ggseg(atlas = brainnetome, mapping=aes(fill=region), adapt_scales = FALSE ),c("gg","ggplot"))
 
 })
 

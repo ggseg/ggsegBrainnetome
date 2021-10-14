@@ -1,26 +1,20 @@
 ## 2d polygons ----
 
-#' Automated probabilistic reconstruction of white-matter pathways
+#'  Brainnetome atlas
+#'
+#'  The functional specialization of the human cingulate cortex analyzed by the resting-state functional
+#'  connectivity (FC) of each subregion from a network perspective.
 #'
 #' @docType data
 #' @name brainnetome
 #' @keywords datasets
 #' @family ggseg_atlases
-#' @references Yendiki et al. (2011) Automated probabilistic reconstruction of 
-#' white-matter pathways in health and disease using an atlas of the underlying anatomy.  
-#' Front. Neuroinform. 5:23. doi: 10.3389/fninf.2011.00023
-#' (\href{https://www.ncbi.nlm.nih.gov/pubmed/22016733}{PubMed})
-#'
-#' @format A data.frame with 11341 observations and 11 variables
-#' \describe{
-#'   \item{long}{coordinates for the x-axis}
-#'   \item{lat}{coordinates for the y-axis}
-#'   \item{area}{name of region}
-#'   \item{hemi}{dummy name of the hemisphere}
-#'   \item{side}{which side to view (sagittal)}
-#'   \item{label}{label name from Freesurfer}
-#'   \item{atlas}{name of the atlas}
-#' }
+#' @references Yu C, Zhou Y, Liu Y, Jiang T, Dong H, Zhang Y, Walter M.
+#'     Functional segregation of the human cingulate cortex is confirmed by functional connectivity based neuroanatomical parcellation.
+#'     Neuroimage. 2011 Feb 14;54(4):2571-81.
+#'     doi: 10.1016/j.neuroimage.2010.11.018.
+#'     Epub 2010 Nov 10. PMID: 21073967.
+#'     (\href{https://pubmed.ncbi.nlm.nih.gov/21073967/}{PubMed})
 #'
 #' @examples
 #' data(brainnetome)
@@ -28,17 +22,21 @@
 
 
 ### 3d meshes ----
-#' White matter tract parcellations
+#'  Brainnetome 3d atlas
+#'
+#'  The functional specialization of the human cingulate cortex analyzed by the resting-state functional
+#'  connectivity (FC) of each subregion from a network perspective.
 #'
 #' @docType data
 #' @name brainnetome_3d
 #' @keywords datasets
 #' @family ggseg3d_atlases
-#' @references Yendiki et al. (2011) Automated probabilistic reconstruction of 
-#' white-matter pathways in health and disease using an atlas of the underlying anatomy.  
-#' Front. Neuroinform. 5:23. doi: 10.3389/fninf.2011.00023
-#' (\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2724595/}{PubMed})
-#'
+#' @references Yu C, Zhou Y, Liu Y, Jiang T, Dong H, Zhang Y, Walter M.
+#'     Functional segregation of the human cingulate cortex is confirmed by functional connectivity based neuroanatomical parcellation.
+#'     Neuroimage. 2011 Feb 14;54(4):2571-81.
+#'     doi: 10.1016/j.neuroimage.2010.11.018.
+#'     Epub 2010 Nov 10. PMID: 21073967.
+#'     (\href{https://pubmed.ncbi.nlm.nih.gov/21073967/}{PubMed})
 #'
 #' @examples
 #' data(brainnetome_3d)
