@@ -18,14 +18,14 @@ knitr::opts_chunk$set(
 # ggsegBrainnetome <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
-[![Codecov test coverage](https://codecov.io/gh/LCBC-UiO/ggsegBrainnetome/branch/master/graph/badge.svg)](https://codecov.io/gh/LCBC-UiO/ggsegBrainnetome?branch=master)
-[![R build status](https://github.com/LCBC-UiO/ggsegBrainnetome/workflows/R-CMD-check/badge.svg)](https://github.com/LCBC-UiO/ggsegBrainnetome/actions)
-[![DOI](https://zenodo.org/badge/250281064.svg)](https://zenodo.org/badge/latestdoi/250281064)
+[![R-CMD-check](https://github.com/ggseg/ggsegBrainnetome/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegBrainnetome/actions)
 <!-- badges: end -->
 
-This package contains dataset for plotting the Tracula white matter tracts with ggseg and ggseg3d. 
+This package contains dataset for plotting the [Brainnetome](https://atlas.brainnetome.org/) atlas ggseg and ggseg3d. 
 
-Yendiki et al. (2011) _Automated probabilistic reconstruction of white-matter pathways in health and disease using an atlas of the underlying anatomy_. Front. Neuroinform. 5:23. [doi: 10.3389/fninf.2011.00023](https://www.ncbi.nlm.nih.gov/pubmed/22016733)
+Yu C, Zhou Y, Liu Y, Jiang T, Dong H, Zhang Y, Walter M. Functional segregation of the human cingulate cortex is confirmed by functional connectivity based neuroanatomical parcellation. Neuroimage. 2011 Feb 14;54(4):2571-81. doi: 10.1016/j.neuroimage.2010.11.018. Epub 2010 Nov 10. PMID: 21073967. [pubmed](https://pubmed.ncbi.nlm.nih.gov/21073967/).
+
+To learn how to use these atlases, please look at the documentation for [ggseg](https://ggseg.github.io/ggseg/) and [ggseg3d](https://ggseg.github.io/ggseg3d)
 
 ## Installation
 
@@ -48,27 +48,27 @@ You can install the released version of ggsegBrainnetome from [GitHub](https://g
 remotes::install_github("LCBC-UiO/ggsegBrainnetome")
 ```
 
-```{r}
+```{r, fig.height=7}
 library(ggseg)
-library(ggplot2)
 library(ggseg3d)
 library(ggsegBrainnetome)
-library(dplyr)
 
 plot(brainnetome) +
   theme(legend.position = "bottom", 
         legend.text = element_text(size = 9)) +
-  guides(fill = guide_legend(ncol = 3))
+  guides(fill = guide_legend(ncol = 6))
 
 ```
 
 ```{r "noneval", eval=FALSE}
+library(dplyr)
 ggseg3d(atlas = brainnetome_3d) %>% 
   add_glassbrain() %>% 
   pan_camera("right lateral")
 ```
 
 ```{r "orca", include=FALSE}
+library(dplyr)
 p <- ggseg3d(atlas = brainnetome_3d) %>%
   add_glassbrain(hemisphere = "left")%>%
   pan_camera("right lateral") %>%
