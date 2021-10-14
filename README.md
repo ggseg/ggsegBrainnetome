@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/ggseg/ggsegBrainnetome/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegBrainnetome/actions)
+[![DOI](https://zenodo.org/badge/416644902.svg)](https://zenodo.org/badge/latestdoi/416644902)
 <!-- badges: end -->
 
 This package contains dataset for plotting the
@@ -66,6 +67,22 @@ ggseg3d(atlas = brainnetome_3d) %>%
 ```
 
 <img src="man/figures/README-3d-plot.png" width="100%" />
+
+## Citation
+
+Athanasia Monika Mowinckel. (2021). ggseg/ggsegBrainnetome: v0.0.1
+(v0.0.1). Zenodo. <https://doi.org/10.5281/zenodo.5569249>
+
+    @software{athanasia_monika_mowinckel_2021_5569249,
+      author       = {Athanasia Monika Mowinckel},
+      title        = {ggseg/ggsegBrainnetome: v0.0.1},
+      month        = oct,
+      year         = 2021,
+      publisher    = {Zenodo},
+      version      = {v0.0.1},
+      doi          = {10.5281/zenodo.5569249},
+      url          = {https://doi.org/10.5281/zenodo.5569249}
+    }
 
 Please note that the ‘ggsegBrainnetome’ project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
