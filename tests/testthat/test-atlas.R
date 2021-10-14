@@ -1,3 +1,6 @@
+library(ggseg)
+library(ggseg3d)
+
 # ggseg ----
 context("test-palettes")
 test_that("check new palettes work", {
