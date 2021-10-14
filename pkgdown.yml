@@ -2,8 +2,5 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-10-13T08:10Z
-urls:
-  reference: https://lcbc-uio.github.io/ggsegBrainnetome//reference
-  article: https://lcbc-uio.github.io/ggsegBrainnetome//articles
+last_built: 2021-10-14T07:58Z
 

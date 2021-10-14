@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>White matter tract parcellations — brainnetome_3d • ggsegBrainnetome</title>
+<title>Brainnetome 3d atlas — brainnetome_3d • ggsegBrainnetome</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -19,8 +19,8 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
@@ -46,9 +46,10 @@
 
 
 
-<meta property="og:title" content="White matter tract parcellations — brainnetome_3d" />
-<meta property="og:description" content="White matter tract parcellations" />
-<meta property="og:image" content="https://lcbc-uio.github.io/ggsegBrainnetome/logo.svg" />
+<meta property="og:title" content="Brainnetome 3d atlas — brainnetome_3d" />
+<meta property="og:description" content="The functional specialization of the human cingulate cortex analyzed by the resting-state functional
+ connectivity (FC) of each subregion from a network perspective." />
+<meta property="og:image" content="/logo.svg" />
 
 
 
@@ -80,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ggsegBrainnetome</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.1.001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
 
@@ -95,13 +96,10 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/LCBC-UiO/ggsegBrainnetome/">
+  <a href="https://github.com/ggseg/ggsegBrainnetome/">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -119,13 +117,14 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>White matter tract parcellations</h1>
-    <small class="dont-index">Source: <a href='https://github.com/LCBC-UiO/ggsegBrainnetome/blob/master/R/brainnetome.R'><code>R/brainnetome.R</code></a></small>
+    <h1>Brainnetome 3d atlas</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ggseg/ggsegBrainnetome/blob/master/R/brainnetome.R'><code>R/brainnetome.R</code></a></small>
     <div class="hidden name"><code>brainnetome_3d.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>White matter tract parcellations</p>
+    <p>The functional specialization of the human cingulate cortex analyzed by the resting-state functional
+ connectivity (FC) of each subregion from a network perspective.</p>
     </div>
 
     <pre class="usage"><span class='va'>brainnetome_3d</span></pre>
@@ -133,17 +132,19 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>An object of class <code>ggseg3d_atlas</code> (inherits from <code>tbl_df</code>, <code>tbl</code>, <code>data.frame</code>) with 1 rows and 4 columns.</p>
+    <p>An object of class <code>ggseg3d_atlas</code> (inherits from <code>tbl_df</code>, <code>tbl</code>, <code>data.frame</code>) with 4 rows and 4 columns.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p>Yendiki et al. (2011) Automated probabilistic reconstruction of 
-white-matter pathways in health and disease using an atlas of the underlying anatomy.  
-Front. Neuroinform. 5:23. doi: 10.3389/fninf.2011.00023
-(<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2724595/'>PubMed</a>)</p>
+    <p>Yu C, Zhou Y, Liu Y, Jiang T, Dong H, Zhang Y, Walter M.
+    Functional segregation of the human cingulate cortex is confirmed by functional connectivity based neuroanatomical parcellation.
+    Neuroimage. 2011 Feb 14;54(4):2571-81.
+    doi: 10.1016/j.neuroimage.2010.11.018.
+    Epub 2010 Nov 10. PMID: 21073967.
+    (<a href='https://pubmed.ncbi.nlm.nih.gov/21073967/'>PubMed</a>)</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>brainnetome_3d</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: data set ‘brainnetome_3d’ not found</span></div></pre>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -155,7 +156,7 @@ Front. Neuroinform. 5:23. doi: 10.3389/fninf.2011.00023
 
       <footer>
       <div class="copyright">
-  <p>Developed by Athanasia Mo Mowinckel, Didac Vidal-Piñeiro.</p>
+  <p>Developed by Athanasia Mo Mowinckel.</p>
 </div>
 
 <div class="pkgdown">
