@@ -30,7 +30,7 @@ future::plan(future::sequential)
 progressr::handlers("cli")
 progressr::handlers(global = TRUE)
 
-# ── Obtain volumetric atlas ───────────────�
+# ── Obtain volumetric atlas ───────────────�
 # Download the Brainnetome volumetric atlas from:
 # http://atlas.brainnetome.org/download.html
 # File: BN_Atlas_246_1mm.nii.gz (contains both cortical + subcortical)
@@ -64,24 +64,39 @@ if (!file.exists(sub_vol_file)) {
   )
 }
 
-# ── Create subcortical atlas ───────────────�
+# ── Create subcortical atlas ───────────────�
 cli::cli_h1("Creating brainnetome subcortical atlas")
+
+# The 36 subcortical parcels are small and numerous; the default aseg-band
+# slabs scatter them into illegible slivers. Frame the slabs on the actual
+# label extent (3 coronal + 4 axial) and dilate each structure so the
+# projections read as coherent filled shapes rather than specks.
+subcort_slabs <- subcortical_slabs(
+  sub_vol_file,
+  labels = 211:246,
+  coronal = 3,
+  axial = 4,
+  pad = 2
+)
 
 brainnetome_sub <- create_subcortical_from_volume(
   input_volume = sub_vol_file,
   atlas_name = "brainnetome_sub",
   output_dir = here::here("data-raw"),
+  slabs = subcort_slabs,
+  dilate = 2L,
   skip_existing = TRUE,
   cleanup = FALSE
 )
 
 brainnetome_sub <- brainnetome_sub |>
-  atlas_region_contextual("unknown|Background", "label")
+  atlas_region_contextual("unknown|Background", "label") |>
+  atlas_smooth(keep = 0.3, exclude = "cortex_")
 
 cli::cli_alert_success("brainnetome_sub: {nrow(brainnetome_sub$core)} regions")
 print(brainnetome_sub)
 
-# ── Update palettes (merge with existing cortical palette) ─────�
+# ── Update palettes (merge with existing cortical palette) ─────�
 sysdata_path <- here::here("R/sysdata.rda")
 if (file.exists(sysdata_path)) {
   dt <- load(sysdata_path)
