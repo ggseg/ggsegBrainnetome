@@ -1,3 +1,11 @@
+# ggsegBrainnetome 2.0.6
+
+- The subcortical atlas now renders on a **grey-brain anatomical context**. The
+  MNI152 parcels are registered into the fsaverage5 `aseg` and the surrounding
+  cortex, white matter, cerebellum and brainstem are drawn as grey context, so
+  the coloured parcels sit inside a recognisable brain silhouette — matching the
+  FreeSurfer subcortical atlases. Regenerating requires FreeSurfer 7.4.1.
+
 # ggsegBrainnetome 2.0.5
 
 - Rebuilt the subcortical atlas 2D geometry with per-atlas projection tuning:
