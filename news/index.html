@@ -9,7 +9,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">ggsegBrainnetome</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.5</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +39,10 @@
       <small>Source: <a href="https://github.com/ggsegverse/ggsegBrainnetome/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="2.0.5" id="ggsegbrainnetome-205">ggsegBrainnetome 2.0.5<a class="anchor" aria-label="anchor" href="#ggsegbrainnetome-205"></a></h2>
+<ul><li>Rebuilt the subcortical atlas 2D geometry with per-atlas projection tuning: bounding-box-derived slabs (3 coronal + 4 axial) and structure dilation, so the 36 fine subcortical parcels render as coherent filled shapes instead of scattered slivers. 3D meshes are unchanged.</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="2.0.4" id="ggsegbrainnetome-204">ggsegBrainnetome 2.0.4<a class="anchor" aria-label="anchor" href="#ggsegbrainnetome-204"></a></h2>
 <ul><li>Atlas 2D geometry migrated to the sf-optional <code>brain_polygons</code> format (<code>ggseg.formats</code> 0.0.3). The atlases now render without <code>sf</code> and its GDAL/GEOS/PROJ system libraries, enabling wasm and air-gapped installs. Plots are unchanged.</li>

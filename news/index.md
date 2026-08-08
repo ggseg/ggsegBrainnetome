@@ -1,5 +1,12 @@
 # Changelog
 
+## ggsegBrainnetome 2.0.5
+
+- Rebuilt the subcortical atlas 2D geometry with per-atlas projection
+  tuning: bounding-box-derived slabs (3 coronal + 4 axial) and structure
+  dilation, so the 36 fine subcortical parcels render as coherent filled
+  shapes instead of scattered slivers. 3D meshes are unchanged.
+
 ## ggsegBrainnetome 2.0.4
 
 - Atlas 2D geometry migrated to the sf-optional `brain_polygons` format
