@@ -38,7 +38,7 @@ brainnetome_sub()
 #> Type: subcortical
 #> Regions: 36
 #> Hemispheres: NA
-#> Views: axial_1, axial_2, coronal_2, axial_3, coronal_1, axial_4, coronal_3
+#> Views: axial_1, axial_2, axial_3, axial_4, coronal_1, coronal_2, coronal_3
 #> Palette: ✔
 #> Rendering: ✔ ggseg
 #> ✔ ggseg3d (meshes)
