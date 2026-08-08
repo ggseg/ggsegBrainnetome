@@ -1,6 +1,6 @@
 Package: ggsegBrainnetome
 Title: Brainnetome Atlas for the 'ggsegverse' Ecosystem
-Version: 2.0.4
+Version: 2.0.5
 Authors@R: c(
     person(
         given = "Athanasia Mo",
