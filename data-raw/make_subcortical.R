@@ -83,9 +83,9 @@ bn_raw <- create_subcortical_from_volume(
 brainnetome_sub <- bn_raw |>
   aseg_context(focus = "region_0", match_on = "label") |>
   atlas_view_gather() |>
-  atlas_smooth(smoothness = 2, exclude = "^cortex") |>
-  atlas_smooth(smoothness = 5, labels = "^cortex") |>
-  atlas_smooth(keep = 0.15)
+  atlas_smooth(smoothness = 0.4, exclude = "^cortex") |>
+  atlas_smooth(smoothness = 1, labels = "^cortex") |>
+  atlas_simplify(keep = 0.15)
 
 cli::cli_alert_success("brainnetome_sub: {nrow(brainnetome_sub$core)} regions")
 print(brainnetome_sub)
